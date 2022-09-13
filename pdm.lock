@@ -136,9 +136,18 @@ dependencies = [
     "h11>=0.8",
 ]
 
+[[package]]
+name = "watchgod"
+version = "0.8.2"
+requires_python = ">=3.7"
+summary = "Simple, modern file watching and code reload in python."
+dependencies = [
+    "anyio<4,>=3.0.0",
+]
+
 [metadata]
 lock_version = "4.0"
-content_hash = "sha256:3eef03cf73cc924a0a6d71358274228cdea3415fb65c3928e01eb6632fa625de"
+content_hash = "sha256:c00669c6d31af1e0c133515ecfef285de301abee17ffc0290f9edaba7416d339"
 
 [metadata.files]
 "anyio 3.6.1" = [
@@ -305,4 +314,8 @@ content_hash = "sha256:3eef03cf73cc924a0a6d71358274228cdea3415fb65c3928e01eb6632
 "uvicorn 0.18.3" = [
     {url = "https://files.pythonhosted.org/packages/64/82/3fdff66fca901b30e42c88e0c37ada35e181074e0c4fd8d7d7525107329d/uvicorn-0.18.3-py3-none-any.whl", hash = "sha256:0abd429ebb41e604ed8d2be6c60530de3408f250e8d2d84967d85ba9e86fe3af"},
     {url = "https://files.pythonhosted.org/packages/6b/36/20d18a00a14d331f491340bc3a793f902a7de6b908f5b1dec74e066b80b8/uvicorn-0.18.3.tar.gz", hash = "sha256:9a66e7c42a2a95222f76ec24a4b754c158261c4696e683b9dadc72b590e0311b"},
+]
+"watchgod 0.8.2" = [
+    {url = "https://files.pythonhosted.org/packages/9f/60/cfd9150167cb8ec0ac07642fe1383d27300729e0b2b877ff89cb0862bbeb/watchgod-0.8.2-py3-none-any.whl", hash = "sha256:2f3e8137d98f493ff58af54ea00f4d1433a6afe2ed08ab331a657df468c6bfce"},
+    {url = "https://files.pythonhosted.org/packages/e8/6e/3904af0715e03fc5b2636cb8cf8b0eabc45b1f2cf6e4cf8453ddb6d23042/watchgod-0.8.2.tar.gz", hash = "sha256:cb11ff66657befba94d828e3b622d5fb76f22fbda1376f355f3e6e51e97d9450"},
 ]

@@ -1,0 +1,25 @@
+body {
+    background-color: #e3d9c1;
+}
+
+#header {
+    background-color: #c1cbe3;
+}
+
+#header-wrapper {
+    padding: 1.5rem;
+}
+
+#header-text {
+    font-family: "Amita", cursive;
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+#dropdown-nav {
+    text-align: center;
+}
+
+#menu-wrapper {
+    text-align: center;
+}

@@ -2,6 +2,27 @@ body {
     background-color: #e3d9c1;
 }
 
+.imgbox {
+    display: grid;
+    height: 100%;
+}
+
+.single-service {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.single-service p {
+    padding: 0px 16px;
+    font-size: 2rem;
+}
+
+.single-service img {
+    max-width: 100%;
+    max-height: 100vh;
+    margin: auto;
+}
+
 #header {
     background-color: #c1cbe3;
 }

@@ -1,15 +1,18 @@
 from fastapi import FastAPI, Request, Depends, HTTPException
 from fastapi.responses import HTMLResponse
 from fastapi.staticfiles import StaticFiles
+from fastapi.security import OAuth2PasswordBearer
 from fastapi.templating import Jinja2Templates
 from sqlalchemy.orm import Session
 
-from . import crud, models, schemas
-from .database import SessionLocal, engine
+from utils import models, schemas, crud
+from utils.database import SessionLocal, engine
 
 models.Base.metadata.create_all(bind=engine)
 
 app = FastAPI()
+
+oauth2_scheme = OAuth2PasswordBearer(tokenUrl="token")
 
 # Database Dependency
 
@@ -26,6 +29,7 @@ def get_db():
 
 app.mount("/static", StaticFiles(directory="static"), name="static")
 templates = Jinja2Templates(directory="templates")
+
 
 # CRUD Routing
 
@@ -54,7 +58,10 @@ def read_user(user_id: int, db: Session = Depends(get_db)):
 
 @app.post("/users/{user_id}/articles", response_model=schemas.Article)
 def create_article_for_user(
-    user_id: int, article: schemas.ArticleCreate, db: Session = Depends(get_db)
+    user_id: int,
+    article: schemas.ArticleCreate,
+    db: Session = Depends(get_db),
+    token: str = Depends(oauth2_scheme),
 ):
     return crud.create_user_article(db=db, article=article, user_id=user_id)
 
